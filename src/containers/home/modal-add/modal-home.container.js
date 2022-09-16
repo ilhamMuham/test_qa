@@ -42,7 +42,7 @@ const ModalHome = (props) => {
                         FormInput.resetForm()
                         props.handleClose()
                         setAlert({
-                            msg: 'Update fiture has been successful',
+                            msg: 'Update feature has been successful',
                             success: true,
                             visible: true,
                             type: 'update',
@@ -66,7 +66,7 @@ const ModalHome = (props) => {
                         FormInput.resetForm()
                         props.handleClose()
                         setAlert({
-                            msg: 'Add fiture has been successful',
+                            msg: 'Add feature has been successful',
                             success: true,
                             visible: true,
                             type: 'add',
@@ -89,13 +89,13 @@ const ModalHome = (props) => {
             maxWidth='lg'
             width={33}
             isFiture={props.isDetail ? false : true}
-            title='Fiture'
+            title='Feature'
             showModal={props.showModal}
             handleClose={()=> {
                 props.handleClose()
                 FormInput.resetForm()
             }}
-            subTitle={ props.isDetail? 'Detail Fiture' : props.isEdit ? 'Edit Fiture' : 'Add New Fiture' }
+            subTitle={ props.isDetail? 'Detail Feature' : props.isEdit ? 'Edit Feature' : 'Add New Feature' }
             handleSave={() => {
             FormInput.handleSubmit()
             }}

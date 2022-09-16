@@ -2,7 +2,7 @@ lakukan install : npm install
 
 runing project : npm run dev
 
-anda akan diarahkan ke halaman utama, tanpa perlu melakukan login anda bisa membuka detail fiture yang ada dengan cara klik 'See Detail'
+anda akan diarahkan ke halaman utama, tanpa perlu melakukan login anda bisa membuka detail fitur yang ada dengan cara klik 'See Detail'
 untuk menambah, mengedit, dan delete fitur, silakan anda bisa melakukan login terlebih dahulu menggunakan akun dibawah ini : 
 
 "email": "Sincere@april.biz"

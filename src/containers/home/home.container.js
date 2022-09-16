@@ -98,8 +98,8 @@ const Home = () => {
             isOpen={toggleDelete}
             toggleDialog={() => setToggleDelete(!toggleDelete)}
             submitDelete={() => deleteData(id)}
-            deleteTitle='Delete Fiture'
-            deleteText='Are you sure to delete the fiture ?'
+            deleteTitle='Delete Feature'
+            deleteText='Are you sure to delete the feature ?'
           />
         </div>
         )
@@ -126,7 +126,7 @@ const Home = () => {
           const response = await HomeAPI.DeleteFiture(id)
           if (response) {
             setAlert({
-              msg: 'Delete fiture has been successful',
+              msg: 'Delete feature has been successful',
               success: true,
               visible: true,
               type: 'delete',
@@ -134,7 +134,7 @@ const Home = () => {
             _getComment()
             setToggleDelete(false)
           } else {
-            setAlert({ msg: 'Cannot fiture data', success: false, visible: true, type: 'delete' })
+            setAlert({ msg: 'Cannot delete feature', success: false, visible: true, type: 'delete' })
           }
         } catch (err) {
           return err
@@ -208,7 +208,7 @@ const Home = () => {
                             onClick={()=> {
                                 if(userInfo == null){
                                     setAlert({
-                                        msg: 'Login first to add fiture',
+                                        msg: 'Login first to add feature',
                                         success: false,
                                         visible: true,
                                         type: 'login',
@@ -218,7 +218,7 @@ const Home = () => {
                                 }
                             }}
                             outline={'black'}
-                            label={'Add Fiture'}
+                            label={'Add Feature'}
                         />
                     </div>
                 </ContainerButtonTExtHome>
