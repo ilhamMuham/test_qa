@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { Button as Btn } from './button.styled'
 
 const Button = (props) => {
-  console.log('props : ',props)
   return (
     <Btn {...props} onClick={props.disable ? () => {} : props.onClick}>
       {props.children}

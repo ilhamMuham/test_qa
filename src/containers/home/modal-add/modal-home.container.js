@@ -36,10 +36,8 @@ const ModalHome = (props) => {
                     body: values.body,
                     userId: props.dataItem.userId
                 }
-                console.log('formData : ',formData)
                 try {
                     const response = await HomeAPI.EditFiture(props.dataItem.id, formData)
-                    console.log('response update: ',response)
                     if (response.data) {
                         FormInput.resetForm()
                         props.handleClose()
@@ -64,7 +62,6 @@ const ModalHome = (props) => {
                 }
                 try {
                     const response = await HomeAPI.PostFiture(formData)
-                    console.log('response post: ',response)
                     if (response.data) {
                         FormInput.resetForm()
                         props.handleClose()

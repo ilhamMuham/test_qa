@@ -6,7 +6,6 @@ import { Images } from '../../assets'
 import { Header, IconClose, IconClose2, Title, TrackHead, TrackingTitle } from './modal.styled'
 
 const Modal = (props) => {
-    console.log('props modal error : ',props)
     const MDialog = withStyles(() => ({
         paper: {
             width: `${props.width}%`,

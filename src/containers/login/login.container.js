@@ -1,3 +1,7 @@
+import {
+    useDispatch,
+    useSelector
+} from 'react-redux'
 import * as Yup from 'yup'
 import { useFormik } from 'formik'
 import { useRouter } from 'next/router'
@@ -11,6 +15,7 @@ import {
     Input,
     Button
 } from '../../components'
+import { SET_USER_INFO } from '../../redux/action'
 import {
     Title,
     TextTitle,
@@ -20,8 +25,11 @@ import {
     ContainerLogin
 } from './login.styled.container'
 
-const Login = () => {
+const Login = () => {   
     const router = useRouter()
+    const dispatch = useDispatch()
+    const { userInfo } = useSelector((state) => state.loginReducer)
+    console.log('userInfo : ',userInfo)
 
     const FormInput = useFormik({
         enableReinitialize: true,
@@ -35,20 +43,21 @@ const Login = () => {
             password: Yup.string().required('Required*'),
         }),
         onSubmit: async (values, form) => {
-            console.log('values : ',values)
             _login()
         },
     })
 
-    const _login = async (Id) => {
-        console.log('FormInput.values.email : ',FormInput.values.email)
+    const _login = async () => {
         try {
             const response = await LoginAPI.Login()
             if(response.status == 200) {
                 let select = response.data.filter(e=>e.email == FormInput.values.email && e.name == FormInput.values.password)
-                console.log('select : ',select[0])
                 if(select.length > 0) {
                     localStorage.setItem('user_info', JSON.stringify(select[0]))
+                    dispatch({
+                        type: SET_USER_INFO,
+                        payload: select[0]
+                    })
                     router.push('/home')
                 }
             }

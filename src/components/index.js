@@ -2,6 +2,7 @@ import Input from './input'
 import Modal from './modal'
 import Alerts from './alert'
 import Button from './button'
+import Context from './context'
 import ModalDel from './modal-delete'
 import MasterModal from './master-modal'
 import ButtonBasic from './button-basic'
@@ -32,6 +33,7 @@ export {
     Alerts,
     Button,
     Logout,
+    Context,
     PortSvg,
     PdfIcon,
     ModalDel,

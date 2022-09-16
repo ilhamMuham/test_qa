@@ -89,7 +89,6 @@ const Home = () => {
     ]
 
     const deleteModal = (id) => {
-        console.log('toggleDelete inner: ',id)
         return (
 
         <div>
@@ -123,10 +122,8 @@ const Home = () => {
     }
 
     const deleteData = async (id) => {
-        console.log('id delete : ',id)
         try {
           const response = await HomeAPI.DeleteFiture(id)
-          console.log('response delete : ',response)
           if (response) {
             setAlert({
               msg: 'Delete fiture has been successful',
@@ -173,7 +170,6 @@ const Home = () => {
             return err
         }
     }
-    console.log('userInfo : ',userInfo)
 
     useEffect(()=> {
         setUserInfo(localStorage.getItem('user_info')
@@ -201,7 +197,7 @@ const Home = () => {
                     } }
                     label={userInfo == null ? 'Log In' : 'Log Out'}
                 />
-                <TitleHome style={{ marginBottom: '1vh'}}>#1 Unified <StyleText>Modern</StyleText> Test</TitleHome>
+                <TitleHome style={{ marginBottom: '1vh', marginLeft: '125px'}}>#1 Unified <StyleText>Modern</StyleText> Test</TitleHome>
                 <TitleHome style={{ marginTop: '1vh'}}>Management Software</TitleHome>
                 <ContainerTextHome>
                     <TextHome>{'Manage all your test cases, sessions & automation in Testmo. Powerful unified test management: lightning fast UI, rich reports & integrations. Works with Jira, GitHub, GitLab & many more.'}</TextHome>
@@ -211,7 +207,6 @@ const Home = () => {
                         <ButtonBasic
                             onClick={()=> {
                                 if(userInfo == null){
-                                    console.log('set alert warning to login')
                                     setAlert({
                                         msg: 'Login first to add fiture',
                                         success: false,
@@ -283,7 +278,6 @@ const Home = () => {
                                             )}
                                             <ButtonBasic
                                                 onClick={()=> {
-                                                    console.log('See More : ',e)
                                                     setIsDetail(true)
                                                     setDataItem(e)
                                                     setShowModal(true)
@@ -317,7 +311,6 @@ const Home = () => {
                                                         backgroundColor: 'green'
                                                     }}
                                                     onClick={()=> {
-                                                        console.log('See More : ',e)
                                                         setIsEdit(true)
                                                         setDataItem(e)
                                                         setShowModal(true)
@@ -341,7 +334,6 @@ const Home = () => {
                                             </>)}
                                             <ButtonBasic
                                                 onClick={()=> {
-                                                    console.log('See More : ',e)
                                                     setIsDetail(true)
                                                     setDataItem(e)
                                                     setShowModal(true)
