@@ -1,0 +1,6 @@
+Project ini dibuat untuk memenuhi syarat tes masuk perusahaan PT. Kreasi Inovasi Digital, karena tema dari test ini adalah bebas maka saya mengambil tema perangkat lunak managemen, dimana web ini bisa dikembangkan ke arah qa management untuk mempermudah QA melakukan testing dan pendataan.
+
+saat ini fitur yang tersedia hanya sebatas memenuhi persyaratan soal tes saja & api yang digunakan juga mengakses ke url https://jsonplaceholder.typicode.com/
+
+untuk tampilan dibuat minimalis untuk mempercepat pengerjaan namun tetap nyaman dilihat dilihat dengan background berwarna putih konten yang ada akan terlihat dengan jelas dan button yang berwarna warni akan mempermudah pengguna untuk menentukan action apa yang akan mereka pilih, selain itu perbedaan warna juga dibutuhkan agar pengguna lebih berhati-hati dalam melakukan klik pada button.
+di web ini juga disediakan pop up pada beberapa action seperti delete dan logout agar bisa dilakukan konfirmasi terlebih dulu apakan benar user akan melakukan action tersebut atau hanya salah klik saja.
